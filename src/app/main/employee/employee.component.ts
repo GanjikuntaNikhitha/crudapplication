@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DepartmentsService } from 'src/app/shared/departments.service';
 import { EmployeeService } from 'src/app/shared/employee.service';
+import { NotificationService } from 'src/app/shared/notification.service';
 
 @Component({
   selector: 'app-employee',
@@ -16,7 +17,7 @@ export class EmployeeComponent implements OnInit {
     {id:5,name:"Javascript"},
     {id:6,name:"CSE"}
   ]
-  constructor(public empService : EmployeeService,public departmentService : DepartmentsService) { }
+  constructor(public empService : EmployeeService,public departmentService : DepartmentsService, public notificationService :NotificationService) { }
 
   ngOnInit(): void {
     this.empService.getEmployees();
@@ -30,8 +31,9 @@ export class EmployeeComponent implements OnInit {
   onSubmit(){
     if( this.empService.form.valid){
       this.empService.insertEmployees(this.empService.form.value);
-      this.empService.form.reset();
-      this.empService.initializeFromGroup();
+      this.notificationService.success('Record Inserted Successfully');
+      this.empService.form.reset()
+      this.empService.initializeFromGroup()
     }
   }
 

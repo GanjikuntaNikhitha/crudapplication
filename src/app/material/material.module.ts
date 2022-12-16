@@ -9,6 +9,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatButtonModule} from '@angular/material/button';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 const materialComponents:any =[
   MatToolbarModule,
@@ -20,7 +21,8 @@ const materialComponents:any =[
   MatDatepickerModule,
   MatNativeDateModule,
   MatCheckboxModule,
-  MatButtonModule
+  MatButtonModule,
+  MatSnackBarModule
 ]
 
 

@@ -17,6 +17,7 @@ import { EmployeeService } from './shared/employee.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DepartmentsService } from './shared/departments.service';
+import { NotificationService } from './shared/notification.service';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { DepartmentsService } from './shared/departments.service';
     AngularFireDatabaseModule,
     BrowserAnimationsModule
   ],
-  providers: [EmployeeService,DatePipe,DepartmentsService],
+  providers: [EmployeeService,DatePipe,DepartmentsService,NotificationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

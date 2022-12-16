@@ -1,0 +1,18 @@
+.empControls{
+    width: 100%;
+    padding: 5%;
+}
+.empControls > *{
+    width: 100%;
+}
+.myPadding{
+    padding-bottom: 10px;
+}
+
+mat-radio-group mat-radio-button{
+    margin-left: 5px;;
+}
+
+.buttonRow button{
+    margin: 5px;
+}
